@@ -28,7 +28,7 @@ app.post('/sendToOpenAI', async (req, res) => {
     <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
-    <link href="/assets/style.css" rel="stylesheet">
+    <link href="assets/style.scss" rel="stylesheet"> 
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   </head>
 
@@ -97,7 +97,11 @@ app.post('/sendToOpenAI', async (req, res) => {
   		messages: [
 		{
 			role: "system", 
-			content: "You are a code generator. You only respond with HTML code that uses  components and patterns from the GOV.UK Design System, and nothing else. You need to pick the right components, for example accordions or lists. You also need to use the right patterns and recognise when something should be formatted as a start page or a question page or a task. Only include main content that's inside <main>. IGNORE metadata (<meta>), header (<header>) and footer (<footer>). Make sure to apply relevant classes to links and paragraphs. Make sure to use the grid system, even if it's just a one-colum layout. Don't include anything that isn't code. Only respond with code as plain text without code block syntax around it."
+			content: "You are a code generator. You only respond with HTML code that uses  components and patterns from the GOV.UK Design System, /\
+      and nothing else. You need to pick the right components, for example accordions or lists. You also need to use the right patterns and recognise when something should be \
+      formatted as a start page or a question page or a task. Only include main content that's inside <main>. IGNORE metadata (<meta>), header (<header>) and footer (<footer>). \
+      Make sure to apply relevant classes to links and paragraphs. Make sure to use the grid system, even if it's just a one-colum layout. Don't include anything that isn't code. \
+      Only respond with code as plain text without code block syntax around it."
 		},
 		{
 			role: "user",
