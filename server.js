@@ -28,7 +28,7 @@ app.post('/sendToOpenAI', async (req, res) => {
     <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
-    <link href="assets/style.css" rel="stylesheet"> 
+    <link href="/assets/style.css" rel="stylesheet"> 
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   </head>
 
